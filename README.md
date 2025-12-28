@@ -25,8 +25,8 @@
 - [Usage](#-usage)
 - [API Documentation](#-api-documentation)
 - [Screenshots](#-screenshots)
-- [Contributing](#-contributing)
-- [License](#-license)
+
+
 
 ---
 
