@@ -1,0 +1,504 @@
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Color Variables */
+:root {
+  --pink-50: #FDF2F8;
+  --pink-100: #FCE7F3;
+  --pink-400: #F472B6;
+  --pink-500: #EC4899;
+  --pink-600: #DB2777;
+  --gray-600: #4B5563;
+  --gray-800: #1F2937;
+  --gray-900: #111827;
+  --white: #FFFFFF;
+  --success-green: #2E7D32;
+  --warning-orange: #F57C00;
+}
+
+/* Base Styles */
+.risk-page {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, var(--pink-50), var(--white));
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+}
+
+/* Navigation Bar - Import from HomePage */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+
+.navbar.scrolled {
+  background: var(--white);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.nav-logo:hover {
+  opacity: 0.8;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--gray-600);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--pink-400);
+}
+
+.nav-cta {
+  background: var(--pink-400);
+  color: var(--white);
+  border: none;
+  padding: 0.625rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: var(--pink-500);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(244, 114, 182, 0.3);
+}
+
+.risk-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Page Header */
+.risk-header {
+  margin-bottom: 3rem;
+}
+
+.risk-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--pink-500);
+  margin: 0 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .risk-title {
+    font-size: 3rem;
+  }
+}
+
+.risk-subtitle {
+  font-size: 1.125rem;
+  color: var(--gray-600);
+  max-width: 700px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Form Card */
+.risk-form-card {
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.risk-card-header {
+  background: linear-gradient(135deg, var(--pink-400) 0%, var(--pink-500) 100%);
+  padding: 2rem;
+  color: var(--white);
+}
+
+.risk-card-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.risk-card-header p {
+  font-size: 0.875rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.risk-card-content {
+  padding: 2.5rem;
+}
+
+/* Form Grid */
+.risk-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.risk-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.risk-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.risk-help-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--pink-400);
+  cursor: help;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.risk-help-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.risk-input,
+.risk-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background: var(--pink-50);
+}
+
+.risk-input:focus,
+.risk-select:focus {
+  outline: none;
+  border-color: var(--pink-400);
+  box-shadow: 0 0 0 3px rgba(244, 114, 182, 0.1);
+  background: var(--white);
+}
+
+.risk-input::placeholder {
+  color: var(--gray-600);
+  opacity: 0.6;
+}
+
+/* Consent Checkbox */
+.risk-consent-box {
+  background: #F0F5FA;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.risk-consent-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-top: 2px;
+  accent-color: var(--pink-400);
+}
+
+.risk-consent-text {
+  flex: 1;
+}
+
+.risk-consent-text strong {
+  display: block;
+  color: var(--gray-900);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.risk-consent-text p {
+  color: var(--gray-600);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Submit Button */
+.risk-submit-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--pink-400) 0%, var(--pink-500) 100%);
+  color: var(--white);
+  border: none;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+  box-shadow: 0 6px 20px rgba(244, 114, 182, 0.3);
+}
+
+.risk-submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(244, 114, 182, 0.4);
+}
+
+.risk-submit-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.risk-submit-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.risk-error-message {
+  background: var(--pink-50);
+  border: 1px solid var(--pink-400);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--gray-900);
+  font-size: 0.875rem;
+}
+
+/* Result Card */
+.risk-result-card {
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.risk-result-header {
+  background: linear-gradient(135deg, var(--pink-400) 0%, var(--pink-500) 100%);
+  padding: 2rem;
+  color: var(--white);
+}
+
+.risk-result-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.risk-result-content {
+  padding: 2.5rem;
+}
+
+.risk-score-display {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.risk-score-label {
+  font-size: 1rem;
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+}
+
+.risk-score-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--pink-500);
+  margin-bottom: 1rem;
+}
+
+.risk-badge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  background: var(--pink-400);
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.risk-badge.low {
+  background: var(--success-green);
+}
+
+.risk-badge.moderate {
+  background: var(--warning-orange);
+}
+
+.risk-badge.high {
+  background: var(--pink-500);
+}
+
+.risk-score-description {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.risk-divider {
+  border: none;
+  border-top: 1px solid var(--pink-100);
+  margin: 2rem 0;
+}
+
+.risk-factors-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--pink-500);
+  margin-bottom: 1rem;
+}
+
+.risk-factors-description {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+}
+
+.risk-factor-item {
+  background: #F8FBFF;
+  border: 1px solid rgba(244, 114, 182, 0.2);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.risk-factor-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--pink-400);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.risk-factor-content {
+  flex: 1;
+}
+
+.risk-factor-name {
+  font-weight: 500;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.risk-factor-description {
+  font-size: 0.75rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.risk-disclaimer {
+  background: var(--pink-50);
+  border: 1px solid rgba(244, 114, 182, 0.4);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.risk-disclaimer-text {
+  font-size: 0.75rem;
+  color: var(--gray-900);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.risk-disclaimer-text strong {
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .risk-container {
+    padding: 0 1rem;
+  }
+  
+  .risk-form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .risk-card-content {
+    padding: 1.5rem;
+  }
+  
+  .risk-title {
+    font-size: 2rem;
+  }
+  
+  .risk-score-value {
+    font-size: 2rem;
+  }
+}
+

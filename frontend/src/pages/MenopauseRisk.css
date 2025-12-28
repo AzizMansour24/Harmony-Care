@@ -1,0 +1,506 @@
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Color Variables */
+:root {
+  --pink-50: #FDF2F8;
+  --pink-100: #FCE7F3;
+  --pink-400: #F472B6;
+  --pink-500: #EC4899;
+  --pink-600: #DB2777;
+  --gray-600: #4B5563;
+  --gray-800: #1F2937;
+  --gray-900: #111827;
+  --white: #FFFFFF;
+  --success-green: #2E7D32;
+  --warning-orange: #F57C00;
+}
+
+/* Base Styles */
+.menopause-page {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, var(--pink-50), var(--white));
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+}
+
+/* Navigation Bar - Import from HomePage */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+
+.navbar.scrolled {
+  background: var(--white);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.nav-logo:hover {
+  opacity: 0.8;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--gray-600);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--pink-400);
+}
+
+.nav-cta {
+  background: var(--pink-400);
+  color: var(--white);
+  border: none;
+  padding: 0.625rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: var(--pink-500);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(244, 114, 182, 0.3);
+}
+
+.menopause-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Page Header */
+.menopause-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.menopause-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--pink-500);
+  margin: 0 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .menopause-title {
+    font-size: 3rem;
+  }
+}
+
+.menopause-subtitle {
+  font-size: 1.125rem;
+  color: var(--gray-600);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Form Card */
+.menopause-form-card {
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.menopause-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.menopause-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.menopause-label {
+  display: block;
+  font-weight: 500;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Form Inputs */
+.menopause-input,
+.menopause-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background: var(--pink-50);
+}
+
+.menopause-input:focus,
+.menopause-select:focus {
+  outline: none;
+  border-color: var(--pink-400);
+  box-shadow: 0 0 0 3px rgba(244, 114, 182, 0.1);
+  background: var(--white);
+}
+
+.menopause-input:disabled {
+  background: #F3F4F6;
+  color: var(--gray-600);
+  cursor: not-allowed;
+}
+
+.menopause-input::placeholder {
+  color: var(--gray-600);
+  opacity: 0.6;
+}
+
+/* Button */
+.menopause-submit-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--pink-400);
+  color: var(--white);
+  border: none;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.menopause-submit-button:hover:not(:disabled) {
+  background: var(--pink-500);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(244, 114, 182, 0.3);
+}
+
+.menopause-submit-button:disabled {
+  background: var(--gray-600);
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.6;
+}
+
+/* Result Card */
+.menopause-result-card {
+  margin-top: 2rem;
+  padding: 0;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  background: var(--white);
+  overflow: hidden;
+}
+
+.menopause-result-header {
+  background: linear-gradient(135deg, var(--pink-400) 0%, var(--pink-500) 100%);
+  padding: 2rem;
+  text-align: center;
+  color: var(--white);
+}
+
+.menopause-result-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 0.5rem 0;
+}
+
+.menopause-result-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.menopause-risk-display {
+  padding: 2.5rem;
+}
+
+.menopause-risk-main {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--pink-100);
+}
+
+.menopause-risk-label {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 1rem 0;
+}
+
+.menopause-risk-badge-large {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menopause-risk-badge-large.low {
+  background: var(--success-green);
+  color: var(--white);
+}
+
+.menopause-risk-badge-large.moderate {
+  background: var(--warning-orange);
+  color: var(--white);
+}
+
+.menopause-risk-badge-large.high {
+  background: var(--pink-500);
+  color: var(--white);
+}
+
+.menopause-risk-explanation {
+  font-size: 1rem;
+  color: var(--gray-700);
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 1.5rem;
+  background: var(--pink-50);
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--pink-400);
+}
+
+.menopause-probabilities-section {
+  margin-bottom: 2.5rem;
+}
+
+.menopause-probabilities-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 0 0 0.5rem 0;
+}
+
+.menopause-probabilities-description {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+}
+
+.menopause-probabilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.menopause-probability-item {
+  background: var(--pink-50);
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--pink-100);
+}
+
+.menopause-probability-bar-container {
+  width: 100%;
+  height: 12px;
+  background: #E5E7EB;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.menopause-probability-bar {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.5s ease;
+}
+
+.menopause-probability-bar.low {
+  background: var(--success-green);
+}
+
+.menopause-probability-bar.moderate {
+  background: var(--warning-orange);
+}
+
+.menopause-probability-bar.high {
+  background: var(--pink-500);
+}
+
+.menopause-probability-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menopause-probability-label {
+  font-weight: 500;
+  color: var(--gray-900);
+  font-size: 0.875rem;
+}
+
+.menopause-probability-value {
+  font-weight: 700;
+  color: var(--gray-900);
+  font-size: 1rem;
+}
+
+.menopause-next-steps {
+  background: linear-gradient(to bottom, var(--pink-50), var(--white));
+  padding: 2rem;
+  border-radius: 0.75rem;
+  border: 2px solid var(--pink-100);
+}
+
+.menopause-next-steps-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 0 0 1rem 0;
+}
+
+.menopause-next-steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.menopause-next-steps-list li {
+  padding-left: 1.75rem;
+  position: relative;
+  color: var(--gray-700);
+  line-height: 1.7;
+  font-size: 0.9375rem;
+}
+
+.menopause-next-steps-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--pink-500);
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.menopause-risk-badge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.menopause-risk-badge.low {
+  background: var(--success-green);
+  color: var(--white);
+}
+
+.menopause-risk-badge.moderate {
+  background: var(--warning-orange);
+  color: var(--white);
+}
+
+.menopause-risk-badge.high {
+  background: var(--pink-500);
+  color: var(--white);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .menopause-container {
+    padding: 0 1rem;
+  }
+  
+  .menopause-form-card {
+    padding: 1.5rem;
+  }
+  
+  .menopause-title {
+    font-size: 2rem;
+  }
+
+  .menopause-risk-display {
+    padding: 1.5rem;
+  }
+
+  .menopause-result-header {
+    padding: 1.5rem;
+  }
+
+  .menopause-result-title {
+    font-size: 1.5rem;
+  }
+
+  .menopause-risk-badge-large {
+    font-size: 1.25rem;
+    padding: 0.875rem 2rem;
+  }
+
+  .menopause-risk-explanation {
+    font-size: 0.9375rem;
+    padding: 1.25rem;
+  }
+
+  .menopause-next-steps {
+    padding: 1.5rem;
+  }
+}
+

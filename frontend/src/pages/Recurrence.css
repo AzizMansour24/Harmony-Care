@@ -1,0 +1,480 @@
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Color Variables */
+:root {
+  --pink-50: #FDF2F8;
+  --pink-100: #FCE7F3;
+  --pink-400: #F472B6;
+  --pink-500: #EC4899;
+  --pink-600: #DB2777;
+  --gray-600: #4B5563;
+  --gray-800: #1F2937;
+  --gray-900: #111827;
+  --white: #FFFFFF;
+}
+
+/* Base Styles */
+.recurrence-page {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background: var(--pink-50);
+  padding-top: 6rem;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+
+.navbar.scrolled {
+  background: var(--white);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.nav-logo:hover {
+  opacity: 0.8;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--gray-600);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--pink-400);
+}
+
+.nav-cta {
+  background: var(--pink-400);
+  color: var(--white);
+  border: none;
+  padding: 0.625rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: var(--pink-500);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(244, 114, 182, 0.3);
+}
+
+/* Container */
+.recurrence-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.recurrence-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.recurrence-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--pink-600);
+  margin: 0 0 1rem 0;
+}
+
+.recurrence-subtitle {
+  font-size: 1.125rem;
+  color: var(--gray-600);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Form Card */
+.recurrence-form-card {
+  background: var(--white);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.recurrence-error {
+  background: #FFEBEE;
+  color: #C62828;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #C62828;
+}
+
+/* Form */
+.recurrence-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.recurrence-form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .recurrence-form-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.recurrence-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.recurrence-label {
+  font-weight: 600;
+  color: var(--gray-800);
+  font-size: 0.95rem;
+}
+
+.recurrence-input,
+.recurrence-select {
+  padding: 0.875rem 1rem;
+  border: 2px solid #E5E7EB;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--pink-50);
+  color: var(--gray-900);
+  transition: all 0.3s ease;
+}
+
+.recurrence-input:focus,
+.recurrence-select:focus {
+  outline: none;
+  border-color: var(--pink-400);
+  background: var(--white);
+  box-shadow: 0 0 0 4px rgba(219, 39, 119, 0.1);
+}
+
+.recurrence-select {
+  cursor: pointer;
+}
+
+/* Submit Button */
+.recurrence-submit-button {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--pink-600) 0%, var(--pink-400) 100%);
+  color: var(--white);
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.recurrence-submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(219, 39, 119, 0.3);
+}
+
+.recurrence-submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.recurrence-loading-spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: var(--white);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Result Card */
+.recurrence-result-card {
+  background: var(--white);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.recurrence-result-header {
+  background: linear-gradient(135deg, var(--pink-600) 0%, var(--pink-400) 70%);
+  padding: 2rem;
+  text-align: center;
+}
+
+.recurrence-result-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+}
+
+.recurrence-result-content {
+  padding: 2.5rem;
+}
+
+.recurrence-result-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .recurrence-result-main {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Risk Badge */
+.recurrence-risk-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  flex: 1;
+}
+
+.recurrence-risk-high {
+  background: linear-gradient(135deg, #FFEBEE 0%, #FFFFFF 100%);
+  border: 2px solid #C62828;
+}
+
+.recurrence-risk-low {
+  background: linear-gradient(135deg, #E8F5E9 0%, #FFFFFF 100%);
+  border: 2px solid #2E7D32;
+}
+
+.recurrence-risk-icon {
+  font-size: 3rem;
+}
+
+.recurrence-risk-text {
+  flex: 1;
+}
+
+.recurrence-risk-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  margin-bottom: 0.25rem;
+}
+
+.recurrence-risk-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.recurrence-risk-high .recurrence-risk-value {
+  color: #C62828;
+}
+
+.recurrence-risk-low .recurrence-risk-value {
+  color: #2E7D32;
+}
+
+/* Probability Section */
+.recurrence-probability-section {
+  flex: 1;
+  text-align: center;
+}
+
+.recurrence-probability-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  margin-bottom: 0.5rem;
+}
+
+.recurrence-probability-value {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.recurrence-prob-high {
+  color: #C62828;
+}
+
+.recurrence-prob-low {
+  color: #2E7D32;
+}
+
+.recurrence-probability-bar-container {
+  width: 100%;
+  height: 12px;
+  background: #E5E7EB;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.recurrence-probability-bar {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+.recurrence-bar-high {
+  background: linear-gradient(90deg, #C62828 0%, #E53935 100%);
+}
+
+.recurrence-bar-low {
+  background: linear-gradient(90deg, #2E7D32 0%, #4CAF50 100%);
+}
+
+/* Explanation Section */
+.recurrence-explanation-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--pink-50);
+  border-radius: 1rem;
+  border-left: 4px solid var(--pink-400);
+}
+
+.recurrence-explanation-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 0 0 1rem 0;
+}
+
+.recurrence-explanation-text {
+  font-size: 1rem;
+  color: var(--gray-700);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Next Steps Section */
+.recurrence-next-steps-section {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--pink-50) 0%, var(--white) 100%);
+  border-radius: 1rem;
+  border: 2px solid var(--pink-100);
+}
+
+.recurrence-next-steps-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 0 0 1rem 0;
+}
+
+.recurrence-next-steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.recurrence-next-step-item {
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+
+.recurrence-next-step-item::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--pink-600);
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .recurrence-container {
+    padding: 1rem;
+  }
+
+  .recurrence-title {
+    font-size: 2rem;
+  }
+
+  .recurrence-form-card {
+    padding: 1.5rem;
+  }
+
+  .recurrence-result-content {
+    padding: 1.5rem;
+  }
+
+  .recurrence-probability-value {
+    font-size: 2rem;
+  }
+}
+
