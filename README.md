@@ -7,7 +7,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![React](https://img.shields.io/badge/React-19.2-blue.svg)](https://reactjs.org/)
 [![Flask](https://img.shields.io/badge/Flask-2.0-green.svg)](https://flask.palletsprojects.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 
 [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [API Documentation](#-api-documentation) • [Contributing](#-contributing)
 
@@ -398,45 +398,22 @@ POST /predict_hads
 ---
 
 ## 📸 Screenshots
+<img width="1920" height="1030" alt="agressivite2" src="https://github.com/user-attachments/assets/6c45e6d5-3f46-4913-b6f2-c9b325262389" />
+<img width="1920" height="1030" alt="Recidive1" src="https://github.com/user-attachments/assets/fd4fcbf7-ad99-43a1-a4d9-204f8e84ccc6" />
+<img width="1920" height="1030" alt="Paper2" src="https://github.com/user-attachments/assets/59a2d6a0-7f13-4f99-b4a4-45f1940f3b87" />
+<img width="1920" height="1030" alt="Paper1" src="https://github.com/user-attachments/assets/c7bff1a3-2f52-4606-b4c6-69e08d6e1ced" />
+<img width="1920" height="1030" alt="menopause2" src="https://github.com/user-attachments/assets/5fc6fc92-07c5-4353-9134-121712deb444" />
+<img width="1920" height="1080" alt="hads2" src="https://github.com/user-attachments/assets/fb5d2147-91d9-4712-90e7-4d8d9d0ae81c" />
+<img width="1920" height="1030" alt="GeneticRisk" src="https://github.com/user-attachments/assets/e4773575-1176-4b9e-bed0-14fd7edbac46" />
+<img width="1920" height="1030" alt="Capture3" src="https://github.com/user-attachments/assets/ff31e772-248b-4500-a88b-a5ae0ca76bda" />
+<img width="1920" height="1030" alt="Capture2" src="https://github.com/user-attachments/assets/de1c6daf-ef77-4583-8ff0-02b72cd027fc" />
+<img width="1920" height="1030" alt="Capture1" src="https://github.com/user-attachments/assets/25b6dff0-e307-4076-947d-bb36a6bcfe10" />
+<img width="1920" height="1030" alt="Capture" src="https://github.com/user-attachments/assets/5c7efbd7-ef50-418c-b0e0-77a3c63612eb" />
 
-> 📝 **Note**: Add screenshots of your application here to showcase the UI and features.
 
-<!--
-### Home Page
-![Home Page](screenshots/home.png)
 
-### Risk Assessment
-![Risk Assessment](screenshots/risk-assessment.png)
 
-### Cancer Detection
-![Cancer Detection](screenshots/cancer-detection.png)
--->
 
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. **Fork the repository**
-2. **Create a feature branch** (`git checkout -b feature/AmazingFeature`)
-3. **Commit your changes** (`git commit -m 'Add some AmazingFeature'`)
-4. **Push to the branch** (`git push origin feature/AmazingFeature`)
-5. **Open a Pull Request**
-
-### Development Guidelines
-
-- Follow PEP 8 style guide for Python code
-- Use ESLint and Prettier for JavaScript/React code
-- Write clear commit messages
-- Add comments and documentation for complex logic
-- Test your changes before submitting
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -451,6 +428,11 @@ The authors and contributors are not responsible for any consequences arising fr
 ## 👥 Authors
 
 - **Aziz Mansour** - [@AzizMansour24](https://github.com/AzizMansour24)
+- **Fatma Bacha**
+- **Emna Allouche**
+- **Nidhal Rouissi**
+- **Nour Zouaghi**
+- **Mariem Khalfallah**
 
 ---
 
